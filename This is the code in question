@@ -1,0 +1,22 @@
+public void Damage(int dmg)
+    {
+        if(attacking.isAttacking == true)
+        {
+            Life = -dmg;
+            anim.SetTrigger("Hit");
+            Debug.Log("Fui Atingido!");
+            if(Life <= 0)
+            {
+                Debug.Log("Morri");
+                Destroy(gameObject);
+            }
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "GoodAtack")
+        {
+
+        }
+    }
